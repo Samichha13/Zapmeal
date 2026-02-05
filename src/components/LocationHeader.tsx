@@ -1,6 +1,7 @@
 'use client'
 
 import { Search, MapPin, Mic } from 'lucide-react'
+import Image from 'next/image'
 
 interface LocationHeaderProps {
   location?: string
@@ -11,9 +12,13 @@ export default function LocationHeader({ location = 'A-76, A Block, Sector 36, D
     <div className="sticky top-0 z-40 bg-gradient-to-b from-brown-800 via-brown-700 to-brown-600 text-white px-4 py-4 shadow-lg">
       <div className="flex items-center justify-between mb-4 animate-slideDown">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full flex items-center justify-center font-bold shadow-lg hover:scale-110 transition-transform">
-            Z
-          </div>
+          <Image 
+            src="/zaplogo.png" 
+            alt="Zapmeal Logo" 
+            width={40} 
+            height={40}
+            className="rounded-full shadow-lg hover:scale-110 transition-transform"
+          />
           <div>
             <p className="text-xs opacity-75 font-medium">Deliver to</p>
             <span className="font-semibold text-sm flex items-center gap-1">Home <span className="text-xs">▼</span></span>
